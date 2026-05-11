@@ -38,7 +38,9 @@ Run this before sending cards to WeChat.
 
 - Cover uses `00-cover-21x9.png`, not a body card.
 - Hybrid body contains normal text plus ordered paragraph images.
+- Temporary preview/readback verifies the visible title editor, hidden title field, and side-card title all equal the article title.
+- Temporary preview/readback verifies author is empty unless the user explicitly supplied one.
 - Temporary preview/readback verifies body image count, paragraph presence, and target word count.
 - Mobile-story body may contain one stitched long image.
 - No temporary cover image remains in the body.
-- Save as draft only; do not publish without explicit confirmation.
+- Save as draft only; do not publish without explicit confirmation. Filling the editor is not completion until the draft history/readback shows a successful save.
