@@ -9,6 +9,7 @@ Use this workflow for dual-device WeChat posts where each paragraph has a tightl
 - Visual rhythm: 5 images, each mapped to one paragraph.
 - Default article layout: normal text paragraph, then its matching image.
 - Each image includes readable Chinese text baked into the image.
+- Reading model: image layer = key takeaways for busy readers; text layer = detailed explanation for readers with time.
 - Cover remains separate at 21:9 and should avoid lower-left title collision in WeChat.
 
 ## Draft Structure
@@ -34,6 +35,29 @@ Each prompt should specify:
 - Text: one title of 6-12 Chinese characters and one subtitle/callout of 12-20 Chinese characters.
 - Style: grounded industrial editorial, realistic rugged terminal, schematic overlays, clear hierarchy.
 
+## Skimmable Image Layer
+
+Before generating images, write a 5-line "image-only read":
+
+```md
+## Image-Only Read
+1. <image title + key callout>
+2. <image title + key callout>
+3. <image title + key callout>
+4. <image title + key callout>
+5. <image title + key callout>
+```
+
+This 5-line sequence must communicate the article's main argument without the paragraphs. If it reads like disconnected labels, rewrite it before generating images.
+
+Image text rules:
+
+- Title = conclusion, not topic label. Prefer "断网也要回答" over "本地AI".
+- Callout = the reason, boundary, or action behind the conclusion.
+- Avoid vague titles such as "行业趋势", "解决方案", "未来已来".
+- Use numbers, constraints, and decisions when available.
+- Keep the image layer honest: do not overclaim beyond the paragraph.
+
 Avoid:
 
 - Reusing the same field scene five times.
@@ -56,6 +80,7 @@ Before saving a WeChat draft:
 
 - Check each paragraph has exactly one matching visual.
 - Check every visual says something the paragraph actually says.
+- Read only the image titles/callouts. The main argument should still be clear.
 - In hybrid mode, preview both phone-width and desktop-width reading flow.
 - In mobile-story mode, inspect top, middle, and bottom crops of the long image.
 - Confirm no text is cut off after stitching or upload.

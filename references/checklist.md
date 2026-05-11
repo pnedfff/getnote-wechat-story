@@ -10,6 +10,7 @@ Run this before sending cards to WeChat.
 - In mobile-story mode, body cards are `1080 x 1440`.
 - Body image count matches the intended outline.
 - Every paragraph/image pair has one clear idea.
+- Image-only skim works: cover + image titles/callouts communicate the main argument without reading body paragraphs.
 - Text is readable on a phone screen.
 - Desktop preview does not look like a narrow endless poster unless `mobile-story` was explicitly chosen.
 - No title or body text is within 56px of an edge.
@@ -24,6 +25,7 @@ Run this before sending cards to WeChat.
 - Alibaba orange is an accent, not the whole page.
 - Cover and body cards are separate assets.
 - The WeChat title and digest still carry searchable context.
+- Image text uses conclusions and decisions, not vague section labels.
 - If the article is image-only, accept the accessibility/searchability/desktop-readability tradeoff.
 
 ## WeChat Draft QA

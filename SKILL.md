@@ -24,6 +24,7 @@ Default output mode: `hybrid`.
 - Best for both phone and desktop
 - Keeps text searchable, copyable, and easier to read on desktop
 - Avoids the narrow "one very tall poster" look on desktop
+- Uses a two-layer reading model: busy readers can scan the images for the key message; readers with time can read the paragraphs for full context.
 
 Optional output modes:
 
@@ -60,6 +61,8 @@ Hybrid story rule:
 
 - If `hybrid` mode feels visually fragmented, keep the readable paragraphs and improve the image sequence instead of converting the whole body to one long image.
 - Use consistent visual motifs across the paragraph images, but preserve normal WeChat text between them.
+- The image layer must work as an executive skim: reading only the cover, image titles, callouts, and visual sequence should reveal the article's main argument.
+- The text layer must work as the detailed version: paragraphs provide the scene, reasoning, proof, boundary, and nuance behind each image.
 
 ## When To Use
 
@@ -146,6 +149,7 @@ Keep each image focused:
 - No dense paragraphs
 - No small table text
 - Prefer one idea per image
+- The image must answer "what should a busy reader remember from this paragraph?"
 
 Paragraph-image mode:
 
@@ -153,6 +157,7 @@ Paragraph-image mode:
 - Write 5 meaningful paragraphs, each about 180-220 Chinese characters, total under 1000 Chinese characters unless the user says otherwise.
 - In `hybrid` mode, put the paragraph as normal WeChat text, then insert exactly one tightly related image. The image is not a divider, not a generic decoration, and not a repeated background.
 - Each image must contain baked-in text: one short title of 6-12 Chinese characters plus at most one subtitle or callout of 12-20 Chinese characters.
+- The 5 image titles/callouts must form a readable mini-article by themselves.
 - The five visual beats should usually be: field hook, hardware/mechanism, workflow/action, boundary/risk, decision/closing.
 - If using `mobile-story` and the result feels like a stack of separate slide pages, switch to seamless story mode and connect the five beats with one continuous visual thread.
 
@@ -251,6 +256,7 @@ Before publishing, read `references/checklist.md` and verify:
 - No repeated irrelevant visuals
 - No card is mostly empty unless intentionally used as a pause
 - In `hybrid` mode, the WeChat body text carries the article; images amplify and clarify it.
+- In `hybrid` mode, scan only the images before publishing. If the main argument is unclear without reading paragraphs, rewrite the image titles/callouts.
 - In `mobile-story` mode, the image body can stand alone without extra WeChat text.
 
 Use image viewing or browser screenshots when available.
@@ -305,6 +311,7 @@ General defaults:
 - Output mode: `hybrid`
 - Paragraph image size: `1200x900` or `1600x1200`
 - Mobile-story card size: `1080x1440`
+- Reading model: image layer = key takeaways, text layer = full explanation
 - Background: warm paper or very light gray
 - Accent: Alibaba orange
 - Typography: heavy sans title, readable sans body, mono for code/model names
