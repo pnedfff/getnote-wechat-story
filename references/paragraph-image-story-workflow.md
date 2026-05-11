@@ -7,7 +7,7 @@ Use this workflow for dual-device WeChat posts where each paragraph has a tightl
 - Article body: under 1000 Chinese characters.
 - Text rhythm: 5 paragraphs, about 180-220 Chinese characters each.
 - Visual rhythm: 5 images, each mapped to one paragraph.
-- First-screen skim: a `快速图文要点` block with 5 short text items, mapped one-to-one to the 5 paragraph images.
+- First-screen skim: a `没时间看全文版` block with 5 short text items, mapped one-to-one to the 5 paragraph images.
 - Default article layout: normal text paragraph, then its matching image.
 - Each image includes readable Chinese text baked into the image.
 - Reading model: image layer = key takeaways for busy readers; text layer = detailed explanation for readers with time.
@@ -25,12 +25,12 @@ Create this table in `outline.md` before rendering:
 | 4 | Boundary | One-sentence skim item | What not to overclaim | Short title + callout | Risk, testing, or comparison scene |
 | 5 | Decision | One-sentence skim item | Who should do a POC and why | Short title + callout | Decision/checklist/closing scene |
 
-## 快速图文要点
+## 没时间看全文版
 
 Before the full body, write a short skim block:
 
 ```md
-## 快速图文要点
+## 没时间看全文版
 
 1. **断网也要识别**：无人机先在机上看懂现场。
 2. **32FPS 是门槛**：优化链路比模型名更重要。
@@ -62,7 +62,7 @@ Each prompt should specify:
 
 ## Skimmable Image Layer
 
-Before generating images, write a 5-line "image-only read". It should match the `快速图文要点` block but can be shorter for visual titles:
+Before generating images, write a 5-line "image-only read". It should match the `没时间看全文版` block but can be shorter for visual titles:
 
 ```md
 ## Image-Only Read

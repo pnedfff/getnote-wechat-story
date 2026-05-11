@@ -7,8 +7,8 @@ Run this before sending cards to WeChat.
 - Cover exists and is `2100 x 900`.
 - Output mode is explicit: `hybrid`, `mobile-story`, or `desktop-readable`.
 - Author is left empty unless the user explicitly requests an author name.
-- A `快速图文要点` block exists before the detailed body unless explicitly omitted by the user.
-- `快速图文要点` contains exactly one item per paragraph image.
+- A `没时间看全文版` block exists before the detailed body unless explicitly omitted by the user.
+- `没时间看全文版` contains exactly one item per paragraph image.
 - In hybrid mode, body contains readable paragraphs plus matching images.
 - In mobile-story mode, body cards are `1080 x 1440`.
 - Body image count matches the intended outline.

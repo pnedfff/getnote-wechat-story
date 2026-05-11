@@ -12,7 +12,7 @@ Update this whenever the agent repeats a mistake.
 ## Article Shape
 
 - Default is `hybrid`, not image-only. Keep readable body text unless the user explicitly asks for a long image.
-- Do not forget the first-screen `快速图文要点` skim block. It is separate from the image-only read and should appear in the WeChat body unless explicitly omitted.
+- Do not forget the first-screen `没时间看全文版` skim block. It is separate from the image-only read and should appear in the WeChat body unless explicitly omitted.
 - Busy-reader image layer must stand alone. If the image titles are just section labels, rewrite them as conclusions.
 - Each paragraph gets one meaningful image, not one image per sentence or line.
 - Do not let paragraph images become decorative stock visuals. They must carry the paragraph's core judgment.
