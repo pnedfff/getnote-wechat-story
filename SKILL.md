@@ -1,17 +1,17 @@
 ---
 name: getnote-wechat-story
-description: Create dual-device WeChat Official Account story articles grounded in the author's Get notes and personal writing style. Use when the user wants 公众号图文故事、双端兼容公众号、笔记生成公众号、根据Get笔记写公众号、每段配图、竖版图文卡片、公众号长图, or a WeChat post where each paragraph has a tightly related AI image.
+description: Load when the user wants to turn GetNote/Get笔记 notes, recordings, drafts, or project reviews into a WeChat Official Account article with author-style grounding, paragraph-matched images, dual-device reading, or draft publishing.
 ---
 
 # GetNote WeChat Story
 
 Turn an article or outline into a WeChat Official Account draft composed of **readable text plus tightly matched story images**.
 
-This skill borrows the guizang-ppt-skill pattern:
+This skill is a routed, progressively loaded directory:
 
 - `SKILL.md` = workflow and rules
 - `assets/template.html` = single-file deck template
-- `references/` = layouts and checklist
+- `references/` = setup, author grounding, layouts, QA, evals, and gotchas
 - `scripts/render_cards.sh` = deterministic export to PNG
 
 But the target is different: **not horizontal presentation slides**, and not a purely decorative WeChat rich-text article. The default output is a dual-device article: readable paragraphs for desktop/search/copy, plus story images that preserve the mobile visual rhythm.
@@ -103,6 +103,15 @@ For author-style grounding, always read:
 - `references/getnote-cli-setup.md` when GetNote CLI is missing or unauthenticated
 - `references/author-style-grounding.md`
 - `references/paragraph-image-story-workflow.md`
+
+Before implementation or publishing, check:
+
+- `references/gotchas.md` for repeated failure modes
+- `references/checklist.md` for QA
+
+When changing this skill, check:
+
+- `references/evals.md` for positive/negative trigger cases
 
 Read `references/example-kevin-profile-from-getnote.md` only as an example for how to build a reusable profile from GetNote material, or when the author explicitly wants Kevin's style. For a new author, create the profile in the project `outline.md` first; only promote it to a reusable reference when the user asks to save that author's style.
 
@@ -335,3 +344,10 @@ It also incorporates selected patterns from Kevin's local baoyu skills:
 - `baoyu-post-to-wechat`: draft save workflow, cover handling, metadata checks, and publishing guardrails
 
 This skill changes the target format to dual-device WeChat story articles, adds a hard 21:9 cover rule, and adds GetNote-based author grounding. The Kevin industrial AI profile is included only as an example of how author grounding should look.
+
+## Maintenance
+
+- Treat every repeated failure as a gotcha and add it to `references/gotchas.md`.
+- If the skill triggers when it should not, tighten the frontmatter description and add a negative eval.
+- If the skill fails to trigger when it should, add real user wording to the description and add a positive eval.
+- Keep heavy explanations out of `SKILL.md`; move them to one-hop files in `references/`.
