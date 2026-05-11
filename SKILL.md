@@ -103,11 +103,13 @@ For author-style grounding, always read:
 - `references/getnote-cli-setup.md` when GetNote CLI is missing or unauthenticated
 - `references/author-style-grounding.md`
 - `references/paragraph-image-story-workflow.md`
+- `references/built-in-image-generation.md` when the article needs AI-generated paragraph images
 
 Before implementation or publishing, check:
 
 - `references/gotchas.md` for repeated failure modes
 - `references/checklist.md` for QA
+- `references/built-in-image-generation.md` for image generation, text overlay, and preview readback checks
 
 When changing this skill, check:
 
@@ -216,6 +218,7 @@ Style rules:
 - Treat images as argument carriers, following the baoyu Type x Style approach: choose `scene`, `flowchart`, `comparison`, `framework`, `timeline`, or `infographic` based on what the paragraph needs to explain.
 - For technical/industrial posts, default to `editorial + blueprint` rather than cute, decorative, or generic stock-style visuals.
 - If the user asks for built-in image generation, generate the paragraph images with the built-in image tool and write exact prompts first. Do not replace requested AI-generated images with unrelated web images.
+- Do not substitute code-drawn placeholder cards for AI images. If exact Chinese text is required, generate a meaningful raster scene with the built-in image model first, then apply deterministic local text overlay for typography fidelity.
 - The cover must be 21:9 and separate from body cards.
 - Do not place large cover text in the lower-left/bottom safe zone. WeChat cover previews can overlay the article title there, causing duplicate or overlapping titles.
 - Prefer a clean visual cover with only a small top-right label/subtitle, or leave all title text to WeChat's title field.

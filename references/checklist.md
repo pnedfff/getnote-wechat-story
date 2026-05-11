@@ -6,6 +6,7 @@ Run this before sending cards to WeChat.
 
 - Cover exists and is `2100 x 900`.
 - Output mode is explicit: `hybrid`, `mobile-story`, or `desktop-readable`.
+- Author is left empty unless the user explicitly requests an author name.
 - In hybrid mode, body contains readable paragraphs plus matching images.
 - In mobile-story mode, body cards are `1080 x 1440`.
 - Body image count matches the intended outline.
@@ -17,12 +18,14 @@ Run this before sending cards to WeChat.
 - No tiny table, dense code block, or unreadable chart text.
 - No emoji icons.
 - No repeated image used just to "fill space".
+- No code-only placeholder cards. Paragraph images must use generated raster scenes or real relevant visuals, with any local text overlay applied only for text fidelity.
 - Body card order is obvious without extra WeChat text.
 
 ## P1
 
 - Visual rhythm alternates: light/dark/image/quote/process.
 - Alibaba orange is an accent, not the whole page.
+- Generated image prompts are saved in `outline.md` or a prompt file before generation.
 - Cover and body cards are separate assets.
 - The WeChat title and digest still carry searchable context.
 - Image text uses conclusions and decisions, not vague section labels.
@@ -32,6 +35,7 @@ Run this before sending cards to WeChat.
 
 - Cover uses `00-cover-21x9.png`, not a body card.
 - Hybrid body contains normal text plus ordered paragraph images.
+- Temporary preview/readback verifies body image count, paragraph presence, and target word count.
 - Mobile-story body may contain one stitched long image.
 - No temporary cover image remains in the body.
 - Save as draft only; do not publish without explicit confirmation.

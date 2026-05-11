@@ -34,6 +34,8 @@ Each prompt should specify:
 - Subject: the exact paragraph scene, device, customer, or workflow.
 - Text: one title of 6-12 Chinese characters and one subtitle/callout of 12-20 Chinese characters.
 - Style: grounded industrial editorial, realistic rugged terminal, schematic overlays, clear hierarchy.
+- Text policy: if exact Chinese text matters, ask the image model for a text-free scene and apply the exact title/callout locally after generation.
+- Validation policy: reject placeholder cards and any generated image that does not visually support its paragraph.
 
 ## Skimmable Image Layer
 
