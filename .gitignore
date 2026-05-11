@@ -1,0 +1,23 @@
+.DS_Store
+*.log
+.env
+*.key
+*.token
+*.secret
+
+# Generated article projects and exports
+output/
+images/
+writing-workspace/
+illustrations/
+
+# Local credentials and runtime state
+.getnote/
+config.json
+*.sqlite
+*.db
+
+# Browser/publishing temp files
+chrome-profile/
+tmp/
+temp/
