@@ -55,6 +55,7 @@ After saving a draft, use the temporary preview URL or equivalent readback and v
 
 - Title exists.
 - Author follows the account default; do not fill author unless requested.
+- `快速图文要点` exists and has the same count as paragraph images.
 - Body paragraph count matches the outline.
 - Body image count matches the outline.
 - Body Chinese character count is within the target range.

@@ -7,6 +7,7 @@ Use this workflow for dual-device WeChat posts where each paragraph has a tightl
 - Article body: under 1000 Chinese characters.
 - Text rhythm: 5 paragraphs, about 180-220 Chinese characters each.
 - Visual rhythm: 5 images, each mapped to one paragraph.
+- First-screen skim: a `快速图文要点` block with 5 short text items, mapped one-to-one to the 5 paragraph images.
 - Default article layout: normal text paragraph, then its matching image.
 - Each image includes readable Chinese text baked into the image.
 - Reading model: image layer = key takeaways for busy readers; text layer = detailed explanation for readers with time.
@@ -16,13 +17,35 @@ Use this workflow for dual-device WeChat posts where each paragraph has a tightl
 
 Create this table in `outline.md` before rendering:
 
-| Beat | Paragraph Role | Paragraph Draft | Image Text | Image Prompt |
-| --- | --- | --- | --- | --- |
-| 1 | Field hook | A real user/site question | Short title + callout | Scene with device and field constraint |
-| 2 | Mechanism | The hardware or system reason | Short title + callout | Product/mechanism close-up |
-| 3 | Action | How the workflow runs | Short title + callout | Step-by-step operation scene |
-| 4 | Boundary | What not to overclaim | Short title + callout | Risk, testing, or comparison scene |
-| 5 | Decision | Who should do a POC and why | Short title + callout | Decision/checklist/closing scene |
+| Beat | Paragraph Role | Quick Point | Paragraph Draft | Image Text | Image Prompt |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Field hook | One-sentence skim item | A real user/site question | Short title + callout | Scene with device and field constraint |
+| 2 | Mechanism | One-sentence skim item | The hardware or system reason | Short title + callout | Product/mechanism close-up |
+| 3 | Action | One-sentence skim item | How the workflow runs | Short title + callout | Step-by-step operation scene |
+| 4 | Boundary | One-sentence skim item | What not to overclaim | Short title + callout | Risk, testing, or comparison scene |
+| 5 | Decision | One-sentence skim item | Who should do a POC and why | Short title + callout | Decision/checklist/closing scene |
+
+## 快速图文要点
+
+Before the full body, write a short skim block:
+
+```md
+## 快速图文要点
+
+1. **断网也要识别**：无人机先在机上看懂现场。
+2. **32FPS 是门槛**：优化链路比模型名更重要。
+3. **现场先筛一遍**：少传无效视频，多传目标线索。
+4. **不要神化模型**：夜间烟雾还要多传感器验证。
+5. **从拍摄到闭环**：能触发行动才算应急工具。
+```
+
+Rules:
+
+- Exactly one item per paragraph image.
+- Each item has a bold 6-12 Chinese character conclusion and a 12-28 Chinese character explanation.
+- The 5 items must be understandable before reading the paragraphs.
+- The items must not introduce claims that are absent from the detailed body.
+- In `hybrid` mode, this block is normal WeChat text, not an image, so it remains searchable and copyable.
 
 ## Image Prompt Rules
 
@@ -39,7 +62,7 @@ Each prompt should specify:
 
 ## Skimmable Image Layer
 
-Before generating images, write a 5-line "image-only read":
+Before generating images, write a 5-line "image-only read". It should match the `快速图文要点` block but can be shorter for visual titles:
 
 ```md
 ## Image-Only Read
