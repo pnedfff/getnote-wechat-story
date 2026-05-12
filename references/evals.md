@@ -49,4 +49,7 @@ For a generated article, check:
 - The cover avoids lower-left title collision.
 - The body works on both mobile and desktop.
 - No claim says GetNote was read unless note search actually succeeded.
-
+- A specialist can see the real mechanism and boundary conditions.
+- A non-specialist can explain what the system is for and why it matters in the field.
+- The draft contains concrete field texture and at least one human point of view.
+- The prose avoids generic AI-industry filler when a concrete workflow or consequence is available.

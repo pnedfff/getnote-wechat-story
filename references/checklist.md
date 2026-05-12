@@ -18,6 +18,10 @@ Run this before sending cards to WeChat.
 - Image-only skim works: cover + image titles/callouts communicate the main argument without reading body paragraphs.
 - Text is readable on a phone screen.
 - Desktop preview does not look like a narrow endless poster unless `mobile-story` was explicitly chosen.
+- Industry readers can identify the real system, constraints, and boundary conditions without feeling the article is technically hollow.
+- Ordinary readers can answer what the system is for and what changes in the field after reading the skim block and first two sections.
+- The article includes at least one concrete field condition and at least one human actor or operator perspective.
+- The article does not drift into generic AI language when a concrete workflow, tradeoff, or consequence can be named.
 - No title or body text is within 56px of an edge.
 - No tiny table, dense code block, or unreadable chart text.
 - No emoji icons.

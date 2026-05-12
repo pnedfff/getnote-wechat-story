@@ -16,6 +16,10 @@ Update this whenever the agent repeats a mistake.
 - Busy-reader image layer must stand alone. If the image titles are just section labels, rewrite them as conclusions.
 - Each paragraph gets one meaningful image, not one image per sentence or line.
 - Do not let paragraph images become decorative stock visuals. They must carry the paragraph's core judgment.
+- Do not write only for insiders. If a non-specialist cannot explain what the system helps people do on site, the article failed its usefulness test.
+- Do not write only for outsiders. If all technical nouns were sanded off, the article will read like empty industry copy to specialists.
+- Do not let every paragraph stay at the architecture layer. Pull at least one sentence down to weather, signal, terrain, operator workflow, or command response.
+- Do not let the article sound like anonymous AI business prose. Replace generic "趋势/赋能/解决方案/未来" language with a specific actor, action, risk, or decision.
 
 ## Visuals
 

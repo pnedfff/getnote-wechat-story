@@ -48,6 +48,22 @@ Rules:
 - The items must not introduce claims that are absent from the detailed body.
 - In `hybrid` mode, this block is normal WeChat text, not an image, so it remains searchable and copyable.
 
+## Dual-Audience Content Review
+
+Before finalizing the article text, run four separate review passes:
+
+- `过于偏技术` review: keep enough concrete terms, metrics, hardware names, and constraints that an industry reader does not feel talked down to, but explain what the key term changes in practice instead of stacking jargon.
+- `现场感` review: every article should contain real field conditions such as weak network, weather, terrain, operator delay, command pressure, or what the drone sees first. Avoid floating above the site as pure architecture talk.
+- `活人感` review: include at least one human point of view such as operator, commander, rescuer, inspector, or customer-side decision. The article should sound like someone who has seen the workflow, not a detached encyclopedia entry.
+- `AI味` review: remove vague abstract phrasing like generic trend talk, solution talk, and future talk when a more concrete action, tradeoff, or consequence is available.
+
+When balancing insider and ordinary-reader needs:
+
+- Keep the specialist nouns that carry real meaning, but translate them into one sentence of practical consequence.
+- After each technical claim, ask "so what changes on site?"
+- A non-specialist should be able to answer "what is this for?" after the first two paragraphs.
+- A specialist should be able to answer "is this technically grounded?" without feeling that the article hand-waved the core mechanism.
+
 ## Colored Section Headings
 
 For the five detailed sections, do not leave headings as plain black paragraphs. Use a compact editorial style:
