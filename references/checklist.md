@@ -10,6 +10,7 @@ Run this before sending cards to WeChat.
 - A `没时间看全文版` block exists before the detailed body unless explicitly omitted by the user.
 - `没时间看全文版` contains exactly one item per paragraph image.
 - In hybrid mode, body contains readable paragraphs plus matching images.
+- Detailed body sections have colored headings. Alibaba orange is present, and secondary accents create rhythm without overwhelming the article.
 - In mobile-story mode, body cards are `1080 x 1440`.
 - Body image count matches the intended outline.
 - Quick-point count, paragraph count, and body-image count match.
@@ -41,6 +42,7 @@ Run this before sending cards to WeChat.
 - Temporary preview/readback verifies the visible title editor, hidden title field, and side-card title all equal the article title.
 - Temporary preview/readback verifies author is empty unless the user explicitly supplied one.
 - Temporary preview/readback verifies body image count, paragraph presence, and target word count.
+- Temporary preview/readback or screenshot verifies colored section headings are visible in the body, not collapsed into unstyled plain text.
 - Mobile-story body may contain one stitched long image.
 - No temporary cover image remains in the body.
 - Save as draft only; do not publish without explicit confirmation. Filling the editor is not completion until the draft history/readback shows a successful save.

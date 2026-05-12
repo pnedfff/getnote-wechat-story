@@ -168,6 +168,7 @@ Paragraph-image mode:
 - Use when the user asks for `1000字以内`, `每200字一个段落`, or `每段一个带文字AI生图`.
 - Write 5 meaningful paragraphs, each about 180-220 Chinese characters, total under 1000 Chinese characters unless the user says otherwise.
 - Before the detailed paragraphs, include a `没时间看全文版` block with 5 short items. Each item must match one paragraph image and be readable without opening the full article.
+- Each detailed paragraph section must have a visible colored heading, not plain body text. Use Alibaba orange as the primary accent and add restrained secondary accents so the article does not feel monotonous.
 - In `hybrid` mode, put the paragraph as normal WeChat text, then insert exactly one tightly related image. The image is not a divider, not a generic decoration, and not a repeated background.
 - Each image must contain baked-in text: one short title of 6-12 Chinese characters plus at most one subtitle or callout of 12-20 Chinese characters.
 - The 5 image titles/callouts must form a readable mini-article by themselves.

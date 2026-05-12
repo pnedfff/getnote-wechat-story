@@ -8,6 +8,7 @@ Use this workflow for dual-device WeChat posts where each paragraph has a tightl
 - Text rhythm: 5 paragraphs, about 180-220 Chinese characters each.
 - Visual rhythm: 5 images, each mapped to one paragraph.
 - First-screen skim: a `没时间看全文版` block with 5 short text items, mapped one-to-one to the 5 paragraph images.
+- Section rhythm: each detailed paragraph starts with a colored heading. Use Alibaba orange as the anchor color and 2-4 restrained secondary accents across the five headings.
 - Default article layout: normal text paragraph, then its matching image.
 - Each image includes readable Chinese text baked into the image.
 - Reading model: image layer = key takeaways for busy readers; text layer = detailed explanation for readers with time.
@@ -46,6 +47,16 @@ Rules:
 - The 5 items must be understandable before reading the paragraphs.
 - The items must not introduce claims that are absent from the detailed body.
 - In `hybrid` mode, this block is normal WeChat text, not an image, so it remains searchable and copyable.
+
+## Colored Section Headings
+
+For the five detailed sections, do not leave headings as plain black paragraphs. Use a compact editorial style:
+
+- Add a colored left rule or colored number marker.
+- Keep Alibaba orange `#ff6a00` as the dominant brand accent.
+- Use secondary accents such as teal, blue, amber, or steel gray to avoid a flat single-color rhythm.
+- Keep heading text short enough to scan on mobile.
+- Verify by screenshot or DOM readback after saving the WeChat draft.
 
 ## Image Prompt Rules
 
