@@ -300,7 +300,9 @@ For `hybrid`:
 3. Upload `00-cover-21x9.png` only as a temporary body image so it appears in "从正文选择".
 4. Open the cover picker, select the 21:9 temporary image, click `下一步`, then click the crop dialog's `确认`.
 5. After the cover preview appears, remove the temporary 21:9 image from the body.
-6. Save as draft and verify: visible title editor, hidden title field, side-card title, empty/default author, text paragraphs, paragraph images, cover preview, and no 21:9 temporary image remains in the body.
+6. Click the visible `保存为草稿` button, not a hidden `继续保存` node or a generic DOM match. Treat the click itself as a required step.
+7. After the click, reattach to the active WeChat editor/list page if navigation or session invalidation occurs, then verify: visible title editor, hidden title field, side-card title, empty/default author, text paragraphs, paragraph images, cover preview, and no 21:9 temporary image remains in the body.
+8. Fetch the temporary preview URL for the saved draft and verify the server-rendered preview, not only the editor DOM or save-history timestamp.
 
 For `mobile-story`:
 
@@ -308,7 +310,8 @@ For `mobile-story`:
 2. Upload `00-cover-21x9.png` only as a temporary body image so it appears in "从正文选择".
 3. Open the cover picker, select the 21:9 temporary image, click `下一步`, then click the crop dialog's `确认`.
 4. After the cover preview appears, remove the temporary 21:9 image from the body.
-5. Save as draft and verify: body image count is `1`, cover preview is visible, and no 21:9 temporary image remains in the body.
+5. Click the visible `保存为草稿` button, then reattach if the page/session changes.
+6. Fetch the temporary preview URL and verify: body image count is `1`, cover preview is visible, and no 21:9 temporary image remains in the body.
 
 Do not click publish/mass-send without explicit confirmation.
 
@@ -316,6 +319,8 @@ Publishing guardrails borrowed from `baoyu-post-to-wechat`:
 
 - Prefer draft save over publish unless the user explicitly says to publish.
 - Verify visible title editor, hidden title field, side-card title, digest, cover preview, body image count, and temporary cover cleanup before reporting success.
+- A save-history timestamp alone is insufficient. Final success requires server-side temporary preview readback after the save click.
+- Use the visible `保存为草稿` control and click it as a real user action. If the browser target/session becomes stale after save, reattach before verifying.
 - When WeChat cover selection opens a crop dialog, click the dialog confirmation button; selecting the image is not enough.
 - If the draft was deleted or appmsg id changed, create a new draft instead of trying to patch the old one.
 

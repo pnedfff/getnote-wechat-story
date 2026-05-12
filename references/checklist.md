@@ -43,6 +43,7 @@ Run this before sending cards to WeChat.
 - Temporary preview/readback verifies author is empty unless the user explicitly supplied one.
 - Temporary preview/readback verifies body image count, paragraph presence, and target word count.
 - Temporary preview/readback or screenshot verifies colored section headings are visible in the body, not collapsed into unstyled plain text.
+- Numbered section headings preserve a visible gap between the sequence and the title in the WeChat preview, e.g. `01　标题`. Use a preview-stable separator, not a normal collapsible space.
 - Mobile-story body may contain one stitched long image.
 - No temporary cover image remains in the body.
-- Save as draft only; do not publish without explicit confirmation. Filling the editor is not completion until the draft history/readback shows a successful save.
+- Save as draft only; do not publish without explicit confirmation. Filling the editor is not completion until the visible `保存为草稿` button was clicked and a temporary preview/readback confirms the saved server version.

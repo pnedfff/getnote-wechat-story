@@ -32,8 +32,11 @@ Update this whenever the agent repeats a mistake.
 - Leave the author field empty unless the user explicitly asks for an author name.
 - Save as draft only. Do not publish or mass-send without explicit confirmation.
 - Do not claim a draft is complete until a temporary preview/readback verifies paragraph count, image count, and required text snippets.
+- Do not confuse "editor content changed" with "draft saved". The browser flow must click the visible `保存为草稿` button and then verify the saved preview page.
+- Do not rely on the old CDP session after save. The WeChat page can invalidate or replace it; reattach before post-save readback.
 - Selecting a cover image is not enough; if WeChat opens a crop dialog, click its confirmation button.
 - Remove temporary 21:9 cover images from the body after cover selection.
+- Normal spaces between numbered heading parts may collapse in WeChat preview. Use a preview-stable separator such as a full-width space when the visual gap is required.
 - If the old draft was deleted or the appmsg id changed, create a new draft instead of patching a stale id.
 
 ## Repository Hygiene
